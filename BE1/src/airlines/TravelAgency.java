@@ -1,27 +1,28 @@
 package airlines;
 
+import java.util.HashMap;
+
 public class TravelAgency {
 
    private String name;
-   // TODO: complete here
+   private HashMap<String, Airline> suppliers; 
 
    public TravelAgency(String name) {
       this.name = name;
-      // TODO: complete here
+      this.suppliers = new HashMap<>();
    }
 
    public void addAirline(Airline airline) {
-      // TODO: complete here
+      this.suppliers.put(airline.getIata(), airline);
    }
 
    public Airline getAirlineByIata(String iata) {
-      // TODO: modify line below
-      return null;
+      return this.suppliers.get(iata);
    }
 
    public void display() {
       System.out.println(this.name);
       System.out.println("Suppliers:");
-      // TODO: complete here
+      System.out.println(this.suppliers);
    }
 }

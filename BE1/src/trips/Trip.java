@@ -13,6 +13,17 @@ public class Trip {
         this.flights.add(flight);
     }
 
+    public boolean isValid(){
+        boolean valid = true;
+        int numFlights = this.flights.size();
+
+        for (int i = 0; i < numFlights - 1; i++){
+            valid &= flights.get(i).isConnectedTo(flights.get(i+1));
+        }
+
+        return valid;
+    }
+
     public String toString(){
         int numFlights = this.flights.size();
         if (numFlights == 0) return "No flight yet";

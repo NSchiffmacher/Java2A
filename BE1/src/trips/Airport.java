@@ -12,6 +12,10 @@ public class Airport {
     public String getName() { return name; }
     public String getIata() { return iata; }
 
+    public boolean isSameAs(Airport other){
+        return this.iata == other.iata;
+    }
+
     public String toString(){
         return this.name + " (" + this.iata + ")";
     }

@@ -11,8 +11,8 @@ public class Flight {
         this.arrivalAirport     = arrAirport; 
     }
 
-    public String getFlightNumber() { return this.flightNumber; }
-    public Airport getDepartureAirport() { return this.departureAirport; }
+    public String getFlightNumber()         { return this.flightNumber; }
+    public Airport getDepartureAirport()    { return this.departureAirport; }
     public Airport getArrivalAirport() { return this.arrivalAirport; }
 
     public boolean isConnectedTo(Flight next){

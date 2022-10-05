@@ -17,8 +17,10 @@ public class Trip {
         boolean valid = true;
         int numFlights = this.flights.size();
 
-        for (int i = 0; i < numFlights - 1; i++){
+        int i = 0;
+        while (i < numFlights-1 && valid) {
             valid &= flights.get(i).isConnectedTo(flights.get(i+1));
+            i++;
         }
 
         return valid;

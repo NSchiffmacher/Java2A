@@ -14,6 +14,7 @@ public class Airport {
 
     public boolean isSameAs(Airport other){
         return this.iata == other.iata;
+        
     }
 
     public String toString(){

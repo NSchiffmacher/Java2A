@@ -23,7 +23,7 @@ public class Circle implements Displayable{
    }
 
    public void display(){
-       System.out.println("Circle((" + center.getX() + ", " + center.getY() + "), " + this.radius + ")");
+       System.out.println(this.toString());
    }
 
    /**

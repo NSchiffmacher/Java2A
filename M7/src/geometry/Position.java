@@ -42,7 +42,7 @@ public class Position implements Displayable{
     public double getY(){ return this.y; }
 
    public void display(){
-        System.out.println("Position(" + x + ", " + y + ")");
+        System.out.println(this.toString());
    }
 
     /**

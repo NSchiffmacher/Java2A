@@ -23,7 +23,11 @@ public class Trip {
             i++;
         }
 
+<<<<<<< HEAD
         return valid && (numFlights > 0);
+=======
+        return valid;
+>>>>>>> 839771ce6a6e4354623daca8bf1f175e31516b1e
     }
 
     public String toString(){

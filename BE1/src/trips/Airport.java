@@ -13,7 +13,11 @@ public class Airport {
     public String getIata() { return iata; }
 
     public boolean isSameAs(Airport other){
+<<<<<<< HEAD
         return this.getIata().equals(other.getIata());
+=======
+        return this.iata == other.iata;
+>>>>>>> 839771ce6a6e4354623daca8bf1f175e31516b1e
         
     }
 

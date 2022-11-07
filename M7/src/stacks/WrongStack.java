@@ -1,12 +1,11 @@
 package stacks;
 import java.util.ArrayList;
 
-public class WrongStack<E> extends ArrayList<E>{
+public class WrongStack<E> extends ArrayList<E> implements Stack<E>{
     public WrongStack(){
         super();
     }
     
-
     public void push(E element){
         if (element != null){
             this.add(0, element);

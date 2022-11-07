@@ -1,9 +1,10 @@
 package geometry;
+import java.lang.Comparable;
 
 /**
  * Simplistic class representing Cartesian 2D positions.
  */
-public class Position implements AllInOne{
+public class Position implements AllInOne, Comparable<Position>{
     /** Abscissa */
     private double x;
     /** Ordinate */
@@ -43,6 +44,17 @@ public class Position implements AllInOne{
 
    public void display(){
         System.out.println(this.toString());
+   }
+
+   public int compareTo(Position other){
+       if (this.x != other.x){
+            if (this.x < other.x) return -1;
+            return 1; // this.x == other.x can't happen
+       } 
+
+       if (this.y < other.y) return -1;
+       if (this.y > other.y) return  1;
+       return  0;
    }
 
     /**

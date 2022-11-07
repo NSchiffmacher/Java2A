@@ -3,7 +3,7 @@ package geometry;
 /**
  * Simplistic class representing Cartesian 2D positions.
  */
-public class Position implements Displayable, Manipulable{
+public class Position implements AllInOne{
     /** Abscissa */
     private double x;
     /** Ordinate */

@@ -3,7 +3,7 @@ package geometry;
 /**
  * Simple class representing a circle
  */
-public class Circle implements Displayable, Manipulable{
+public class Circle implements AllInOne{
 
    /** Radius */
    private double radius;

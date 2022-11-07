@@ -3,7 +3,7 @@ package geometry;
 /**
  * Simplistic class representing Cartesian 2D positions.
  */
-public class Position implements Displayable{
+public class Position implements Displayable, Manipulable{
     /** Abscissa */
     private double x;
     /** Ordinate */
@@ -64,6 +64,11 @@ public class Position implements Displayable{
     public void moveTo(Position other) {
         this.x = other.x;
         this.x = other.y;
+    }
+
+    public void translate(double x, double y){
+        this.x += x;
+        this.y += y;
     }
 
     /**

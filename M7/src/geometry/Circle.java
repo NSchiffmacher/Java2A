@@ -3,7 +3,7 @@ package geometry;
 /**
  * Simple class representing a circle
  */
-public class Circle implements Displayable{
+public class Circle implements Displayable, Manipulable{
 
    /** Radius */
    private double radius;
@@ -56,6 +56,9 @@ public class Circle implements Displayable{
    public void moveTo(Position pos) {
       this.center.moveTo(pos);
       // delegate to Position's moveTo() using current center
+   }
+   public void translate(double x, double y){
+      this.center.translate(x, y);
    }
 
    @Override

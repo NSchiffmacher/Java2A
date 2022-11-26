@@ -1,15 +1,20 @@
 package rationals;
 
 import java.util.Objects;
+import java.lang.Comparable;
 
-public class Rational {
+public class Rational implements Comparable<Rational>{
 
 	private int num;
 	private int denom;
 
 	public Rational(int num, int denom) {
-		this.num = num;
-		this.denom = denom;
+		if (denom <= 0) throw new IllegalArgumentException("Denominator can't be negative or zero");
+
+
+		int pgcd = this.gcd(num, denom);
+		this.num = num / pgcd;
+		this.denom = denom / pgcd;
 	}
 
 	public Rational(int nb) {
@@ -23,6 +28,33 @@ public class Rational {
 
 	public int getDenom() {
 		return denom;
+	}
+
+	private int gcd(int a, int b) { //should be static ?
+		if (b == 0) return a;
+		return gcd(b, a % b);
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (o == this)
+			return true;
+		
+		if (!(o instanceof Rational))
+			return false;
+		
+		Rational other = (Rational) o;
+		return this.num * other.denom == this.denom * other.num; // uses x and y
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.num, this.denom);
+	}
+
+	@Override
+	public int compareTo(Rational other){
+		return Double.compare(this.num * other.denom, this.denom * other.num);
 	}
 
 	@Override

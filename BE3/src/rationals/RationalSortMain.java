@@ -15,6 +15,10 @@ public class RationalSortMain {
 		System.out.println(rationals);
 		
 		// complete here
+		Collections.sort(rationals);
+		System.out.println(rationals);
+		Collections.reverse(rationals);
+		System.out.println(rationals);
 
 	}
 
